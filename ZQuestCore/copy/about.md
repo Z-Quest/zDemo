@@ -23,5 +23,3 @@ Here are some additional reasons to join the fray:
 * The player can join a guild or create their own guild to fight alongside other Zs.
 * The player can compete in PvP battles to test their skills against other Zs.
 * The player can complete quests to earn rewards and help rebuild the world.
-
-I hope this helps!
