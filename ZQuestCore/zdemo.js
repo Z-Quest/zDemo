@@ -1,4 +1,15 @@
-var quests = [];
+var quests = [
+    {
+    name: "The Lost City",
+    description: "Find the lost city of Atlantis",
+    reward: 1000 gold
+  },
+  {
+    name: "The Evil Wizard",
+    description: "Defeat the evil wizard and save the kingdom",
+    reward: 5000 gold
+  }
+];
 var questLog = [];
 var questTracker = {};
 
@@ -40,4 +51,3 @@ function createQuest() {
 document.querySelector("#take-quest").addEventListener("click", takeQuest);
 setInterval(updateQuestTracker, 1000);
 document.querySelector("#create-quest").addEventListener("click", createQuest);
-
