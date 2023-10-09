@@ -50,7 +50,7 @@
    - Engage with users through customer support channels and community forums.
    - Evaluate and optimize the software based on usage metrics and market trends.
 
-<hr>
+
 ## Google Sheets and Firebase Integration
 
 Integrating Firebase with Google Sheets can be achieved using Firebase Cloud Functions and the Google Sheets API. 
@@ -82,7 +82,7 @@ Integrating Firebase with Google Sheets can be achieved using Firebase Cloud Fun
 With this setup, whenever there's an update to the milestone data in Firebase, Cloud Function will be triggered automatically. It will then retrieve the updated data and update the corresponding cells in Google Sheets.
 
 
-<hr>
+
 ## Google Playstore Alpha Launch Roadmap
 
 1. **Preparation Phase**
