@@ -52,6 +52,7 @@
 
 <hr>
 ## Google Sheets and Firebase Integration
+
 Integrating Firebase with Google Sheets can be achieved using Firebase Cloud Functions and the Google Sheets API. 
 
 1. **Set up Firebase:**
