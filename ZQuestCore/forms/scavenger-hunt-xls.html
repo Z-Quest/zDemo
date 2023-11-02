@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scavenger Hunt Form</title>
+</head>
+<body>
+  <h1>Add Items, Tasks, and Clues</h1>
+  <form action="/add-item" method="post">
+    <div>
+      <label for="itemName">Item Name:</label>
+      <input type="text" name="itemName" required>
+    </div>
+    <div>
+      <label for="task">Task:</label>
+      <input type="text" name="task" required>
+    </div>
+    <div>
+      <label for="clue">Clue:</label>
+      <input type="text" name="clue" required>
+    </div>
+    <button type="submit">Add Item</button>
+  </form>
+</body>
+</html>
