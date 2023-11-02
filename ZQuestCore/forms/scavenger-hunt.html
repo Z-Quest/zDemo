@@ -64,3 +64,79 @@
   </script>
 </body>
 </html>
+
+<-- To create a form for adding items, tasks, and clues, we can use HTML for the structure and JavaScript for handling form submissions. Here's a simple example of how you can create the form:
+-->
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scavenger Hunt Form</title>
+</head>
+<body>
+  <h1>Add Items, Tasks, and Clues</h1>
+  <form id="scavengerForm">
+    <div>
+      <label for="itemName">Item Name:</label>
+      <input type="text" id="itemName" required>
+    </div>
+    <div>
+      <label for="task">Task:</label>
+      <input type="text" id="task" required>
+    </div>
+    <div>
+      <label for="clue">Clue:</label>
+      <input type="text" id="clue" required>
+    </div>
+    <button type="submit">Add Item</button>
+  </form>
+
+  <h2>Added Items, Tasks, and Clues</h2>
+  <ul id="itemList"></ul>
+
+  <script>
+    // Function to handle form submission
+    document.getElementById('scavengerForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Get input values from the form
+      const itemName = document.getElementById('itemName').value;
+      const task = document.getElementById('task').value;
+      const clue = document.getElementById('clue').value;
+
+      // Create an object to represent the item, task, and clue
+      const item = {
+        name: itemName,
+        task: task,
+        clue: clue
+      };
+
+      // Call a function to add the item to the list
+      addItemToList(item);
+
+      // Clear the form fields for the next entry
+      document.getElementById('itemName').value = '';
+      document.getElementById('task').value = '';
+      document.getElementById('clue').value = '';
+    });
+
+    // Function to add the item to the list
+    function addItemToList(item) {
+      const itemList = document.getElementById('itemList');
+      const li = document.createElement('li');
+
+      // Format the list item text with item details
+      li.textContent = `Item Name: ${item.name}, Task: ${item.task}, Clue: ${item.clue}`;
+
+      // Add the list item to the list
+      itemList.appendChild(li);
+    }
+  </script>
+</body>
+</html>
+```
+<--
+In this example, we create a form with input fields for the item name, task, and clue. When the user submits the form, the JavaScript code handles the form submission, creates an object representing the item, and adds it to the list below the form. You can continue to add more items, tasks, and clues using the form, and they will all be displayed in the list.
+
+This is a basic demonstration of how you can create a form to add items, tasks, and clues. In a real application, you may want to store the added items in a database or a more permanent data structure, so they are not lost when the page is refreshed. Additionally, you can add validation and error handling to the form to ensure the input data is correct before adding it to the list.
+-->
