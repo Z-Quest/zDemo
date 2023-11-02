@@ -1,3 +1,5 @@
+# Scavenger Hunt Guide
+
 A scavenger hunt is a fun and interactive game where participants are given a list of items, clues, or tasks to complete within a specified area or timeframe. The goal of the game is for participants to find or obtain all the items or complete all the tasks on the list. Scavenger hunts are often played at parties, team-building events, school activities, or family gatherings.
 
 Here are some general rules for a scavenger hunt:
