@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scavenger Hunt Game</title>
+</head>
+<body>
+  <script>
+    // Create an array of objects representing items to find.
+    // Each object contains the item's name and a clue to find it.
+    const itemsToFind = [
+      { name: 'Key', clue: 'A small metal object that opens doors.' },
+      { name: 'Map', clue: 'It provides directions and shows landmarks.' },
+      // Add more items here...
+    ];
+
+    // Function to start the scavenger hunt game.
+    function startScavengerHunt() {
+      alert('Welcome to the Scavenger Hunt Game!\nFollow the clues to find the items.');
+
+      // Loop through each item in the array and prompt the user for input.
+      for (let i = 0; i < itemsToFind.length; i++) {
+        const item = itemsToFind[i];
+        const userAnswer = prompt(`Clue: ${item.clue}\nWhat item am I describing?`);
+
+        // Check if the user's answer matches the correct item name.
+        if (userAnswer && userAnswer.toLowerCase() === item.name.toLowerCase()) {
+          alert(`Congratulations! You found the ${item.name}.`);
+        } else {
+          alert(`Oops! That's not the correct answer. The ${item.name} is still hidden.`);
+        }
+      }
+
+      alert('Congratulations! You completed the scavenger hunt.');
+    }
+
+    // Start the scavenger hunt game when the page loads.
+    window.onload = startScavengerHunt;
+  </script>
+</body>
+</html>
