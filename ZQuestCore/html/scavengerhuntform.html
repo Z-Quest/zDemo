@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scavenger Hunt Form</title>
+</head>
+<body>
+  <h1>Add Items, Tasks, and Clues</h1>
+  <form id="scavengerForm">
+    <div>
+      <label for="itemName">Item Name:</label>
+      <input type="text" id="itemName" required>
+    </div>
+    <div>
+      <label for="task">Task:</label>
+      <input type="text" id="task" required>
+    </div>
+    <div>
+      <label for="clue">Clue:</label>
+      <input type="text" id="clue" required>
+    </div>
+    <button type="submit">Add Item</button>
+  </form>
+
+  <h2>Added Items, Tasks, and Clues</h2>
+  <ul id="itemList"></ul>
+
+  <script>
+    // Function to handle form submission
+    document.getElementById('scavengerForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Get input values from the form
+      const itemName = document.getElementById('itemName').value;
+      const task = document.getElementById('task').value;
+      const clue = document.getElementById('clue').value;
+
+      // Create an object to represent the item, task, and clue
+      const item = {
+        name: itemName,
+        task: task,
+        clue: clue
+      };
+
+      // Call a function to add the item to the list
+      addItemToList(item);
+
+      // Clear the form fields for the next entry
+      document.getElementById('itemName').value = '';
+      document.getElementById('task').value = '';
+      document.getElementById('clue').value = '';
+    });
+
+    // Function to add the item to the list
+    function addItemToList(item) {
+      const itemList = document.getElementById('itemList');
+      const li = document.createElement('li');
+
+      // Format the list item text with item details
+      li.textContent = `Item Name: ${item.name}, Task: ${item.task}, Clue: ${item.clue}`;
+
+      // Add the list item to the list
+      itemList.appendChild(li);
+    }
+  </script>
+</body>
+</html>
