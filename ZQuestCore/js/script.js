@@ -15,3 +15,9 @@ function choosePath(path) {
             output.innerHTML = "Avast! Ye be lost at sea!";
     }
 }
+
+// Add this function at the end of the file
+function exitAdventure() {
+    const output = document.getElementById('output');
+    output.innerHTML = "Fair winds, me heartie! Until our paths cross again on the high seas!";
+}
