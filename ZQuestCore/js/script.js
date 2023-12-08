@@ -21,3 +21,8 @@ function exitAdventure() {
     const output = document.getElementById('output');
     output.innerHTML = "Fair winds, me heartie! Until our paths cross again on the high seas!";
 }
+// Add this function at the end of the file
+function restartAdventure() {
+    const output = document.getElementById('output');
+    output.innerHTML = "Choose yer path, me heartie:";
+}
